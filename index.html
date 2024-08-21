@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>स्वर्णिम भारत</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.3.2/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body class="bg-light text-black">
+    <header class="text-center py-6 bg-white shadow-lg">
+      <h1 class="text-red-600 font-extrabold text-6xl">स्वर्णिम भारत</h1>
+      <p class="mt-2 italic text-xl text-gray-700">आपका दैनिक साथी</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <span id="date"></span>
+      <span id="city">नई दिल्ली</span>
+      <span>ई-पत्रिका | मोबाइल संस्करण</span>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="languageDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Language
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Hindi</a></li>
+              <li><a class="dropdown-item" href="#">Bengali</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="cityDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              City-wise News
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="cityDropdown">
+              <li><a class="dropdown-item" href="#">Kolkata</a></li>
+              <li><a class="dropdown-item" href="#">Mumbai</a></li>
+              <li><a class="dropdown-item" href="#">Delhi</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="stateDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              State-wise News
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="stateDropdown">
+              <li><a class="dropdown-item" href="#">West Bengal</a></li>
+              <li><a class="dropdown-item" href="#">Maharashtra</a></li>
+              <li><a class="dropdown-item" href="#">Delhi</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="typeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              News Type
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+              <li><a class="dropdown-item" href="#">Politics</a></li>
+              <li><a class="dropdown-item" href="#">Sports</a></li>
+              <li><a class="dropdown-item" href="#">Entertainment</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button id="toggle-mode" aria-label="Toggle dark mode">
+          <i class="fas fa-sun" id="sun-icon"></i>
+          <i class="fas fa-moon" id="moon-icon"></i>
+        </button>     
+    </nav>
+
+    <main class="container mx-auto p-6" id="content">
+      <div class="layout-switcher mb-4 text-center">
+        <button id="newspaperLayout" class="btn btn-primary mx-2">
+          Newspaper
+        </button>
+        <button id="gridLayout" class="btn btn-primary mx-2">Grid</button>
+        <button id="listLayout" class="btn btn-primary mx-2">List</button>
+      </div>
+      <div id="paper" class="relative shadow-2xl">
+        <!-- Page content will be dynamically loaded here -->
+      </div>
+      <div class="flex justify-center mt-8">
+        <button id="prev" class="btn btn-primary mr-4">
+          <span>&larr;</span>
+        </button>
+        <span id="pageNumber" class="text-lg font-bold mx-4">1 / 21</span>
+        <button id="next" class="btn btn-primary">
+          <span>&rarr;</span>
+        </button>
+      </div>
+    </main>
+
+    <aside class="advertisement-section text-center my-6">
+      <h3 class="font-bold text-2xl mb-4">विज्ञापन</h3>
+      <div id="advertisement" class="p-4 bg-gray-100 border rounded">
+        <!-- Dynamic advertisement will be displayed here -->
+      </div>
+    </aside>
+
+    <footer class="bg-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <h3>Contact Us</h3>
+            <p>Email: info@swarnimbharat.com</p>
+            <p>Phone: +91-123-456-7890</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3>Follow Us</h3>
+            <a href="#" class="fa fa-facebook" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="fa fa-twitter" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="fa fa-instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="fa fa-linkedin" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3>Subscribe</h3>
+            <form action="#" method="post">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <p>&copy; 2024 स्वर्णिम भारत | सभी अधिकार सुरक्षित</p>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> |
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

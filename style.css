@@ -1,0 +1,291 @@
+/* General styles for light mode */
+body {
+  font-family: "Georgia", serif;
+  background-color: #f9f9f9;
+  color: #1c1c1c;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1c1c1c;
+  color: #f9f9f9;
+  font-weight: normal; /* Corrected weight value */
+}
+
+/* Header styles */
+header {
+  background-image: url("your-banner-image.jpg");
+  background-size: cover;
+  color: rgb(160, 4, 4);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Dark mode for header */
+header.dark-mode {
+  background-image: none;
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+/* Navbar styles */
+.navbar {
+  margin-bottom: 20px;
+  background-color: chartreuse; /* Corrected color */
+}
+
+/* General background for elements */
+.navbar,
+.page,
+.advertisement-section,
+footer {
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode for navbar, pages, advertisement, and footer */
+.navbar.dark-mode,
+.page.dark-mode,
+.advertisement-section.dark-mode,
+footer.dark-mode {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #06080aa2;
+}
+
+/* Dark mode button adjustments */
+.btn-primary.dark-mode {
+  background-color: #444;
+  border-color: #444;
+}
+
+.btn-primary.dark-mode:hover {
+  background-color: #222;
+  border-color: #222;
+}
+
+/* Dark mode text and elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li {
+  transition: color 0.3s;
+}
+
+h1.dark-mode,
+h2.dark-mode,
+h3.dark-mode,
+h4.dark-mode,
+h5.dark-mode,
+h6.dark-mode,
+p.dark-mode,
+a.dark-mode,
+span.dark-mode,
+li.dark-mode {
+  color: #f9f9f9;
+}
+
+/* Dark mode for page navigation */
+.page-navigation {
+  background-color: #007bff;
+}
+
+.page-navigation.dark-mode {
+  background-color: #444;
+}
+
+/* Dark mode for page number display */
+.btn-primary.dark-mode {
+  background-color: #444;
+  border-color: #444;
+}
+
+.btn-primary.dark-mode:hover {
+  background-color: #222;
+  border-color: #222;
+}
+
+/* Layout styles */
+
+/* Default layout (Newspaper-style) */
+.layout-newspaper .page {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid layout */
+.layout-grid .page {
+  display: inline-block;
+  width: 48%;
+  margin: 1%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* List layout */
+.layout-list .page {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* HTML and body styling */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1; /* Takes up all available space except the footer */
+  padding: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+footer .footer-top .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+footer .footer-top .social-icons a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+footer .footer-top .contact-info,
+footer .footer-top .newsletter {
+  flex: 1;
+  margin: 10px;
+}
+
+footer .footer-top .newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  margin-right: 10px;
+}
+
+footer .footer-top .newsletter button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer .footer-top .newsletter button:hover {
+  background-color: #0056b3;
+}
+
+footer .footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+footer .footer-bottom a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode footer .footer-top .social-icons a {
+  color: #e0e0e0;
+}
+
+body.dark-mode footer .footer-top .newsletter input[type="email"] {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode footer .footer-top .newsletter button {
+  background-color: #007bff;
+}
+#sun-icon,
+#moon-icon {
+  display: none;
+}
+
+#sun-icon {
+  display: block;
+}
+
+body.dark-mode #sun-icon {
+  display: none;
+}
+
+body.dark-mode #moon-icon {
+  display: block;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1c1c1c;
+  color: #f9f9f9;
+}
